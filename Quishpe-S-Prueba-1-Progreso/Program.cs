@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Quishpe_S_Prueba_1_Progreso.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Quishpe_S_Prueba_1_ProgresoContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Quishpe_S_Prueba_1_ProgresoContext") ?? throw new InvalidOperationException("Connection string 'Quishpe_S_Prueba_1_ProgresoContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
