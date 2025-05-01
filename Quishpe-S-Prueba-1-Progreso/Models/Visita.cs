@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace Quishpe_S_Prueba_1_Progreso.Models
 {
     public class Visita
@@ -21,7 +22,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Models
         public Boolean RequiereMedicacion {  get; set; }
         public int IdMascota { get; set; }
         [ForeignKey("IdMascota")]
-        public Mascota Mascota { get; set; }    
+        public Mascota? Mascota { get; set; }    
     }
     public enum MotivoVisita
     {
