@@ -25,7 +25,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Models
         public Mascota? Mascota { get; set; }    
     }
     public enum MotivoVisita
-    {
+    {                    
         Vacunacion,
         RevisionGeneral,
         Cirujia

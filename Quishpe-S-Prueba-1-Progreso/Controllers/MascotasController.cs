@@ -22,8 +22,8 @@ namespace Quishpe_S_Prueba_1_Progreso.Controllers
         // GET: Mascotas
         public async Task<IActionResult> Index()
         {
-            var quishpe_S_Prueba_1_ProgresoContext = _context.Mascota.Include(m => m.Dueño);
-            return View(await quishpe_S_Prueba_1_ProgresoContext.ToListAsync());
+            var Quishpe_S_Prueba_1_ProgresoContext = _context.Mascota.Include(m => m.Dueño);
+            return View(await Quishpe_S_Prueba_1_ProgresoContext.ToListAsync());
         }
 
         // GET: Mascotas/Details/5

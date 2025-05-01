@@ -11,6 +11,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Models
         public string Raza { get; set; }
         public double Peso { get; set; }
         public double Tamano { get; set; }
+        
         public DateTime FechaNacimiento { get; set;}
         public int IdDueño { get; set; }
         [ForeignKey("IdDueño")]

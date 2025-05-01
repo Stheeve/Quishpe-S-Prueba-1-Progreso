@@ -3,6 +3,21 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <!-- Meme de 700x700 -->
+    <img src="/Images/images.jpg" alt="Meme" width="700" height="700" class="my-4" />
+
+    <!-- Campo de texto y botón -->
+    <div class="mb-3">
+        <input type="text" id="inputTexto" class="form-control form-control-lg w-50 mx-auto" placeholder="Escribe algo aquí..." />
+    </div>
+    <button type="button" class="btn btn-outline-success btn-lg" onclick="mostrarAlerta()">Mostrar Alerta</button>
 </div>
+
+@section Scripts {
+    <script>
+        function mostrarAlerta() {
+            const valor = document.getElementById("inputTexto").value || "(Inventado)";
+            alert("Mi nombre es Stheeven Quishpe, mi curso es Programacion 4., mi hobbie es el boxeo y el valor del campo de texto es: "${valor});
+        }
+    </script>
+}

@@ -29,6 +29,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Models
         public DateTime FechaNacimiento { get; set; }
         [Required]
         public double IngresoMensual {  get; set; }
+        //public string QuishpeS { get; set; }
 
     }
 }
