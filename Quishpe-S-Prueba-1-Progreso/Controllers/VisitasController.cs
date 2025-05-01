@@ -10,23 +10,23 @@ using Quishpe_S_Prueba_1_Progreso.Models;
 
 namespace Quishpe_S_Prueba_1_Progreso.Controllers
 {
-    public class VisitasController : Controller
+    public class Visitas1Controller : Controller
     {
         private readonly Quishpe_S_Prueba_1_ProgresoContext _context;
 
-        public VisitasController(Quishpe_S_Prueba_1_ProgresoContext context)
+        public Visitas1Controller(Quishpe_S_Prueba_1_ProgresoContext context)
         {
             _context = context;
         }
 
-        // GET: Visitas
+        // GET: Visitas1
         public async Task<IActionResult> Index()
         {
             var quishpe_S_Prueba_1_ProgresoContext = _context.Visita.Include(v => v.Mascota);
             return View(await quishpe_S_Prueba_1_ProgresoContext.ToListAsync());
         }
 
-        // GET: Visitas/Details/5
+        // GET: Visitas1/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,19 +45,19 @@ namespace Quishpe_S_Prueba_1_Progreso.Controllers
             return View(visita);
         }
 
-        // GET: Visitas/Create
+        // GET: Visitas1/Create
         public IActionResult Create()
         {
             ViewData["IdMascota"] = new SelectList(_context.Mascota, "Id", "Id");
             return View();
         }
 
-        // POST: Visitas/Create
+        // POST: Visitas1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FechaVisita,Motivo,Tarifa,RequiereMedicacion,IdMascota")] Visita visita)
+        public async Task<IActionResult> Create([Bind("Id,FechaVisita,Motivo,RequiereMedicacion,IdMascota")] Visita visita)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Controllers
             return View(visita);
         }
 
-        // GET: Visitas/Edit/5
+        // GET: Visitas1/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,12 +86,12 @@ namespace Quishpe_S_Prueba_1_Progreso.Controllers
             return View(visita);
         }
 
-        // POST: Visitas/Edit/5
+        // POST: Visitas1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FechaVisita,Motivo,Tarifa,RequiereMedicacion,IdMascota")] Visita visita)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FechaVisita,Motivo,RequiereMedicacion,IdMascota")] Visita visita)
         {
             if (id != visita.Id)
             {
@@ -122,7 +122,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Controllers
             return View(visita);
         }
 
-        // GET: Visitas/Delete/5
+        // GET: Visitas1/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -141,7 +141,7 @@ namespace Quishpe_S_Prueba_1_Progreso.Controllers
             return View(visita);
         }
 
-        // POST: Visitas/Delete/5
+        // POST: Visitas1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
