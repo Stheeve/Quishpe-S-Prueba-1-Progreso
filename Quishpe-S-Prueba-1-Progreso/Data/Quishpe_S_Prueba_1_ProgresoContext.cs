@@ -16,5 +16,6 @@ namespace Quishpe_S_Prueba_1_Progreso.Data
 
         public DbSet<Quishpe_S_Prueba_1_Progreso.Models.Dueño> Dueño { get; set; } = default!;
         public DbSet<Quishpe_S_Prueba_1_Progreso.Models.Mascota> Mascota { get; set; } = default!;
+        public DbSet<Quishpe_S_Prueba_1_Progreso.Models.Visita> Visita { get; set; } = default!;
     }
 }
