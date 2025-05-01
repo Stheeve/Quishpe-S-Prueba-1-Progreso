@@ -10,11 +10,11 @@ using Quishpe_S_Prueba_1_Progreso.Models;
 
 namespace Quishpe_S_Prueba_1_Progreso.Controllers
 {
-    public class Visitas1Controller : Controller
+    public class VisitasController : Controller
     {
         private readonly Quishpe_S_Prueba_1_ProgresoContext _context;
 
-        public Visitas1Controller(Quishpe_S_Prueba_1_ProgresoContext context)
+        public VisitasController(Quishpe_S_Prueba_1_ProgresoContext context)
         {
             _context = context;
         }

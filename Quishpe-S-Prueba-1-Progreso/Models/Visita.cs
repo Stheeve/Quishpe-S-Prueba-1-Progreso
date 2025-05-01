@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace Quishpe_S_Prueba_1_Progreso.Models
 {
     public class Visita
